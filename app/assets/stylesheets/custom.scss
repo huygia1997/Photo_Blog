@@ -1,0 +1,236 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+body {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  height: 2500px;
+  width: 100%;
+  opacity: 0.95;
+}
+
+.back_pic{
+	/* The image used */
+    background-image: url("back.jpg");
+    height: 100%;
+    width: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#search_form {
+	padding-left: 340px;
+}
+#search_text {
+	opacity: 0.5;
+	height: 30px;
+	border-radius: 0px;
+}
+#search_button {
+	border-radius: 0px;
+	opacity: 0.3;
+	width: 50px;
+	height: 30px;
+	background-color: brown;
+	color: white;
+	border: none;
+}
+
+
+#drop_show {
+	background-color: gray;
+	opacity: 0.9;
+	width: 100px;
+	height: 150px;
+	position: absolute;
+	display: none;
+}
+
+#drop_show div{
+	height: 50px;
+	width: 100px;
+	text-align: center;
+	padding-top: 15px;
+	border-bottom: 1px solid;
+
+}
+
+.drop_text {
+	color: black;
+	font-weight: bold;
+}
+
+/*footer*/
+
+.footer_img{
+	width: 30px;
+	height: 30px;
+	opacity: 0.9;
+}
+
+#footer_div{
+	padding-left: 500px;
+}
+
+.navbar-fixed-bottom{
+	background-color: white;
+}
+
+#back_to_top {
+    cursor: pointer;
+    opacity: 0.8;
+    display:none;
+}
+
+/*content*/
+
+.welcome {
+	text-align: center;
+}
+h4 {
+	padding-left: 420px;
+	color: brown;
+}
+#intro_div{
+	margin-top: 100px;
+	background-image: url('https://image.freepik.com/free-photo/linen-canvas-texture-background_1373-441.jpg');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#login_div{
+	margin-top: 50px;
+	display: none;
+	position: absolute;
+	height: 500px;
+	background-image: url('login3.jpg');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#login_content{
+	background-color: white;
+	font-size: xx-large;
+
+}
+
+.login_content{
+	text-align: center;
+	background-color: yellow;
+	height: 100px;
+	margin-top: 50px;
+	border-radius: 20px;
+
+}
+.edit {
+	color:red;
+}
+
+#user_div{
+	margin-top: 650px;
+	display: none;
+	position: absolute;
+	height: 500px;
+	background-image: url('login4.jpg');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#img_user{
+	width: 250px;
+	height: 220px;
+	margin-left: 400px;
+
+}
+#user_num{
+	text-align: center;
+	font-size: xx-large;
+	color: black;
+	font-weight: bolder;
+}
+#img_about{
+	width: 250px;
+	height: 220px;
+	margin-left: 400px;
+
+}
+
+#about_div{
+	margin-top: 1250px;
+	position: absolute;
+	height: 500px;
+	display: none;
+	background-image: url('login6.jpg');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#aboutme{
+	text-align: center;
+	font-size: xx-large;
+	color: red;
+	font-weight: bolder;
+	font-style: inherit;
+}
+
+/*about me page*/
+
+#aboutme_div{
+	margin-top: 100px;
+	background-image: url('back2.jpg');
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#about_ava{
+	width: 250px;
+	height: 220px;
+	margin-left: 400px;
+}
+#introduce{
+	background-color: white;
+	color: black;
+	text-align: center;
+	font-size: x-large;
+}

@@ -10,6 +10,60 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require bootstrap
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+
+	// menu
+    $('#drop_trigger').mouseenter(function(){
+							    $('#drop_show').show(300);
+							});
+	$('#drop_show').mouseleave(function(){
+	    $('#drop_show').hide(300);
+	});
+
+	// back to top
+	$(window).scroll(function () {
+            if ($(this).scrollTop() > 150) {
+                $('#back_to_top').fadeIn();
+            } else {
+                $('#back_to_top').fadeOut();
+            }
+
+            if ($(this).scrollTop() > 300) {
+                $('#login_div').animate({
+                    left: '30%'
+                }, 500).show(500);
+
+            }
+
+            if ($(this).scrollTop() > 800) {
+                $('#user_div').animate({
+                    right: '30%'
+                }, 500).show(500);
+
+            }
+
+            if ($(this).scrollTop() > 1300) {
+                $('#about_div').animate({
+                    left: '30%'
+                }, 500).show(500);
+
+            }
+        });
+        // scroll body to 0px on click
+        $('#back_to_top').click(function () {
+            $('#back_to_top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+        
+        $('#back_to_top').tooltip('show');
+
+});
