@@ -1,0 +1,11 @@
+<% provide(:title, 'View') %>
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+	<% if @user.ava? %>
+		<%= image_tag(@user.ava.url, id: 'ava_img') %>
+
+		<% else %>
+		<%= image_tag('heroku.png', id: 'ava_img') %>
+	<% end %>
+

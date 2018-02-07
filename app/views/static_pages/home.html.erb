@@ -1,3 +1,4 @@
+<% provide(:title, 'Home') %>
 <div class="jumbotron container" id="intro_div">
 	<h1 class="welcome"> Welcome to my Blog!!!</h1><br/>
 	<h4>I'm</h4>
@@ -10,12 +11,12 @@
 	<span id="login_content">Wanna join???</span> <br/> <br/>
 	<h1 class="login_content"><%= link_to "Log in", about_path, class:  
 	"edit"  %></h1>
-	<h1 class="login_content"><%= link_to "Sign up!!!", about_path, class: "edit"  %></h1>
+	<h1 class="login_content"><%= link_to "Sign up!!!", signup_path, class: "edit"  %></h1>
 	
 </div>
 
 <div id="user_div" class="container jumbotron">
-	<%= link_to image_tag("avatar.jpg", alt: "User icon", id: "img_user"), about_path  %>
+	<%= link_to image_tag("user.jpg", alt: "User icon", id: "img_user"), about_path  %>
 	<p id="user_num">Number</p>
 	
 </div>
