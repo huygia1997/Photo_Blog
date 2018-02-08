@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get '/update' ,to: 'users#edit'
 
-  get '/delete', to: 'users#destroy'
+  delete '/delete', to: 'users#destroy'
 
   get '/view', to: 'users#show'
 
