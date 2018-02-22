@@ -7,7 +7,7 @@ body {
   padding-top: 40px;
   padding-bottom: 60px;
   font-family: "Comic Sans MS", cursive, sans-serif;
-  height: 2500px;
+  height: 100px;
   width: 100%;
   opacity: 0.95;
 }
@@ -15,7 +15,7 @@ body {
 .back_pic{
 	/* The image used */
     background: image-url('background.jpeg');
-    height: 100%;
+    height: 2500px;
     width: 100%;
 
     /* Center and scale the image nicely */
@@ -54,8 +54,8 @@ textarea {
 }
 
 #logo:hover {
-  color: #fff;
-  text-decoration: none;
+  color: red;
+  text-decoration: inherit;
 }
 
 #search_form {
@@ -66,6 +66,11 @@ textarea {
 	height: 30px;
 	border-radius: 0px;
 }
+#search_text:hover {
+	opacity: 1;
+	height: 40px;
+	border-color: white;
+}
 #search_button {
 	border-radius: 0px;
 	opacity: 0.3;
@@ -74,6 +79,9 @@ textarea {
 	background-color: brown;
 	color: white;
 	border: none;
+}
+#search_button:hover {
+	opacity: 1;
 }
 
 
@@ -157,7 +165,7 @@ h4 {
 .login_content{
 	text-align: center;
 	background-color: #0d0d0d;
-	height: 100px;
+	height: 50px;
 	margin-top: 50px;
 	border-radius: 20px;
 
@@ -242,7 +250,7 @@ h4 {
 
 /* forms */
 
-.form_control, textarea, select, .uneditable-input {
+.form-control, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 50px;

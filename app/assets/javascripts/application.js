@@ -15,19 +15,18 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-
-$(document).ready(function(){
-
-	// menu
+document.addEventListener("turbolinks:load", function(event) { 
+ // your jquery code
+ // menu
     $('#drop_trigger').mouseenter(function(){
-							    $('#drop_show').show(300);
-							});
-	$('#drop_show').mouseleave(function(){
-	    $('#drop_show').hide(300);
-	});
+                                $('#drop_show').show(300);
+                            });
+    $('#drop_show').mouseleave(function(){
+        $('#drop_show').hide(300);
+    });
 
-	// back to top
-	$(window).scroll(function () {
+    // back to top
+    $(window).scroll(function () {
             if ($(this).scrollTop() > 150) {
                 $('#back_to_top').fadeIn();
             } else {
@@ -37,21 +36,21 @@ $(document).ready(function(){
             if ($(this).scrollTop() > 300) {
                 $('#login_div').animate({
                     left: '30%'
-                }, 500).show(500);
+                }, 200).show(200);
 
             }
 
             if ($(this).scrollTop() > 800) {
                 $('#user_div').animate({
                     right: '30%'
-                }, 500).show(500);
+                }, 200).show(200);
 
             }
 
             if ($(this).scrollTop() > 1300) {
                 $('#about_div').animate({
                     left: '30%'
-                }, 500).show(500);
+                }, 200).show(200);
 
             }
         });
@@ -75,3 +74,4 @@ $(document).ready(function(){
           });
 
 });
+

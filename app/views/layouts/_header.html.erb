@@ -18,32 +18,42 @@
 				</li>
 
 				<li><span style="font-size: xx-large; color: red; pointer-events: none;">|</span></li>
+				<% if logged_in? %>
+					<li>
+						<%= link_to about_path do %>
+							<span id="drop_trigger" class="glyphicon glyphicon-edit">
+								<div id="drop_show"> 
+									<div>
+										<%= link_to "Profile", root_path, class: "drop_text" %>
+									</div>
 
-				<li>
-					<%= link_to  do %>
-						<span id="drop_trigger" class="glyphicon glyphicon-edit">
-							<div id="drop_show"> 
-								<div>
-									<%= link_to "Profile", root_path, class: "drop_text" %>
+									<div>
+										<%= link_to "Edit", root_path, class: "drop_text" %>
+									</div>
+
+									<div>
+										<%= link_to "Log out", logout_path, method: :delete,class: "drop_text" %>
+									</div>
+
+									
 								</div>
+							</span>
+						<% end %>
+					</li>
+				<% else %>
+					<li>
+						<%= link_to login_path do  %>
+							<span class="glyphicon glyphicon-log-in">
+						<% end %>
+					</li>	
+				<% end %>
 
-								<div>
-									<%= link_to "Edit", root_path, class: "drop_text" %>
-								</div>
-
-								<div>
-									<%= link_to "Log out", root_path, class: "drop_text" %>
-								</div>
-
-								
-							</div>
-						</span>
-					<% end %>
+				
 													
 			</ul>
 			<form class="navbar-form navbar-nav" id="search_form" action="/">
 				<div class="form-group">
-			        <input type="text" id="search_text" class="form-control" placeholder="Search">
+			        <input type="text" id="search_text" placeholder="Search">
 			    </div>
 			    <button type="submit" id="search_button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 			</form>

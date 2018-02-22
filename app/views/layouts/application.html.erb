@@ -9,13 +9,20 @@
   </head>
 
   <body>
-  	<div class="back_pic container">
-  		<div class="container">
-	  		<%= render 'layouts/header' %>
-	  		<%= yield %>
-	  		<%= render 'layouts/footer' %>
-	  	</div>
-  	</div>
+    <div class="row">
+        <div class="back_pic container">
+          <div class="container">
+
+            <%= render 'layouts/header' %>
+            <% flash.each do |message_type, message| %>
+              <div class="alert alert-<%= message_type %>"><%= message %></div>
+            <% end %>
+            <%= yield %>
+            <%= render 'layouts/footer' %>
+          </div>
+        </div>
+    </div>
+  	
   	
   	
     
