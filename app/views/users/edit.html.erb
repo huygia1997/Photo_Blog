@@ -1,2 +1,25 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<% provide(:title, 'Edit') %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 jumbotron">
+    <h1>Edit profile</h1>
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <%= f.file_field :ava, class: 'form-control', id: 'ava_size', accept: 'image/jpeg,image/gif,image/png,image/jpg' %>
+
+      <%= f.submit "Save change", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

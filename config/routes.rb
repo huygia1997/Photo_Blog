@@ -8,8 +8,6 @@ Rails.application.routes.draw do
 
   post '/signup', to: 'users#create'
 
-  get '/update' ,to: 'users#edit'
-
   get '/delete', to: 'users#destroy'
 
   get '/view', to: 'users#show'
