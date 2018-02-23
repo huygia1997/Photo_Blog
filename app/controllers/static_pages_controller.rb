@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
 	before_action :logged_in_yet?, only: [:home]
+  layout 'about_layout', only: [:about]
   def home
   end
 

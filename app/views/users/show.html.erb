@@ -1,11 +1,52 @@
-<% provide(:title, 'View') %>
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<% provide(:title, 'My Blog') %>
 
+	
+
+<div class="show_info_div">
 	<% if @user.ava? %>
 		<%= image_tag(@user.ava.url, id: 'ava_img') %>
 
 		<% else %>
 		<%= image_tag('heroku.png', id: 'ava_img') %>
 	<% end %>
+
+	<br/>
+
+	<p id="show_name"><%= @user.name %></p>
+	<p id="show_num">lam sau</p>
+	<p id="show_follow">lam sau</p>
+
+</div>
+
+<div class="show_footer_div">
+	<ul class="show_ul">
+		<li>
+			<%= link_to image_tag("avatar.jpg", alt: "Avatar", class: "img-circle show_footer_img"),
+    'https://www.facebook.com/giahuy.truong.773' %>
+		</li>
+
+		<li>
+			<%= link_to image_tag("GitHub.png", alt: "Github", class: "img-circle show_footer_img"),
+    'https://github.com/huygia1997/Photo_Blog' %>
+		</li>
+
+		<li>
+			<%= link_to image_tag("heroku.png", alt: "Heroku", class: "img-circle show_footer_img"),
+    'https://dashboard.heroku.com/apps/photo-blog-gx' %>
+		</li>
+	</ul>
+
+	<div id="show_backtop">
+		<a id="back_to_top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip">
+			<span class="glyphicon glyphicon-chevron-up">
+				
+			</span>
+		</a>
+	</div>
+
+</div>
+
+<div class="show_content_div">
+	
+</div>
 

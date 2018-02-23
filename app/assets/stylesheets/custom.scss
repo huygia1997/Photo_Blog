@@ -24,6 +24,18 @@ body {
     background-size: cover;
 }
 
+.back_pic_about{
+	/* The image used */
+    background: image-url('background.jpeg');
+    height: 900px;
+    width: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 section {
   overflow: auto;
 }
@@ -224,7 +236,7 @@ h4 {
 /*about me page*/
 
 #aboutme_div{
-	margin-top: 100px;
+	margin-top: 200px;
 	background: image-url('back2.jpg');
 	background-position: center;
     background-repeat: no-repeat;
@@ -264,6 +276,8 @@ input {
 #ava_img{
 	width: 100px;
 	height: 100px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 #error_explanation {
@@ -279,4 +293,76 @@ input {
   .new_form {
     color: $state-danger-text;
   }
+}
+
+.form_div {
+	margin-top: 70px;
+}
+
+.show_info_div {
+	position: fixed;
+	left: 35px;
+	top: 200px;
+	height: 300px;
+	width: 200px;
+	background-color: black;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 10px;
+	opacity: 0.9;
+
+}
+
+.show_footer_div {
+	position: fixed;
+	right: 35px;
+	top: 200px;
+	height: 300px;
+	width: 200px;
+	background-color: black;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 10px;
+	opacity: 0.8;
+
+}
+
+.show_ul {
+	list-style-type: none;
+	margin-right: 35px;
+}
+.show_ul li {
+	margin-top: 15px;
+}
+
+
+.show_footer_img{
+	width: 70px;
+	height: 70px;
+	opacity: 0.9;
+}
+#show_backtop {
+	margin-top: 20px;
+}
+
+#show_name {
+	font-size: large;
+}
+#show_num {
+	font-size: large;
+}
+#show_follow {
+	font-size: large;
+}
+
+
+.show_content_div {
+	margin-top: 50px;
+	height: 1000px;
+	width: 100%;
+	background-color: gray;
+	border-radius: 20px;
+	border: 10px solid;
+	opacity: 0.9;
+	padding: 20px;
 }

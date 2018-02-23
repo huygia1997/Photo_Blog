@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update]
   before_action :correct_user,   only: [:edit, :update]
+  layout 'about_layout', only: [:new, :edit]
+  layout 'show_layout', only: [:show]
   def new
     @user = User.new
   end
