@@ -15,7 +15,7 @@ body {
 .back_pic{
 	/* The image used */
     background: image-url('background.jpeg');
-    height: 2500px;
+    height: auto;
     width: 100%;
 
     /* Center and scale the image nicely */
@@ -27,7 +27,7 @@ body {
 .back_pic_about{
 	/* The image used */
     background: image-url('background.jpeg');
-    height: 900px;
+    height: 2500px;
     width: 100%;
 
     /* Center and scale the image nicely */
@@ -224,6 +224,7 @@ h4 {
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 #aboutme{
 	text-align: center;
@@ -231,6 +232,7 @@ h4 {
 	color: red;
 	font-weight: bolder;
 	font-style: inherit;
+
 }
 
 /*about me page*/
@@ -241,6 +243,7 @@ h4 {
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 100px;
 }
 #about_ava{
 	width: 250px;
@@ -297,6 +300,7 @@ input {
 
 .form_div {
 	margin-top: 70px;
+	margin-bottom: 300px;
 }
 
 .show_info_div {
@@ -317,7 +321,7 @@ input {
 	position: fixed;
 	right: 35px;
 	top: 200px;
-	height: 300px;
+	height: 200px;
 	width: 200px;
 	background-color: black;
 	box-sizing: border-box;
@@ -327,23 +331,6 @@ input {
 
 }
 
-.show_ul {
-	list-style-type: none;
-	margin-right: 35px;
-}
-.show_ul li {
-	margin-top: 15px;
-}
-
-
-.show_footer_img{
-	width: 70px;
-	height: 70px;
-	opacity: 0.9;
-}
-#show_backtop {
-	margin-top: 20px;
-}
 
 #show_name {
 	font-size: large;
@@ -358,11 +345,127 @@ input {
 
 .show_content_div {
 	margin-top: 50px;
-	height: 1000px;
+	height: auto;
 	width: 100%;
 	background-color: gray;
 	border-radius: 20px;
 	border: 10px solid;
 	opacity: 0.9;
 	padding: 20px;
+	margin-bottom: 500px;
+}
+
+.post_div {
+	width: 300px;
+	height: 400px;
+	float: left;
+	margin: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+
+}
+
+
+.post_pic {
+	width: 300px;
+	height: 270px;
+	opacity: 0.5 ;
+	border-radius: 10px;
+}
+.post_pic:hover {
+	border: 1px solid;
+	transition: 0.3s;
+	opacity: 1;
+
+}
+
+.picpic {
+	float: left;
+}
+
+.pagi {
+	float: left;
+	padding-left: 36%;
+}
+#member_name{
+	color: red;
+}
+
+.member_form{
+	height: 80px;
+	width: 500px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.member_pic{
+	height: 50px;
+	width: 50px;
+	float: left;
+	overflow: hidden;
+}
+.member_m{
+	border-bottom: 1px dashed;
+}
+
+#ava_img2{
+	width: 50px;
+	height: 50px;
+	border-radius: 2px;
+}
+.member_name {
+
+	height: 50px;
+	width: 100px;
+	border-radius: 20px;
+	float: left;
+	padding-left: 10px;
+}
+.member_follow {
+	height: 50px;
+	width: 150px;
+	border-radius: 20px;
+	float: left;
+	padding-left: 10px;
+}
+.member_delete {
+	height: 40px;
+	width: 1000px;
+	border-radius: 20px;
+	float: left;
+	padding-left: 10px;
+}
+.show_member_div {
+	margin-top: 50px;
+	height: auto;
+	width: 60%;
+	background-color: #d9d9d9;
+	border-radius: 20px;
+	border: 10px solid;
+	padding: 20px;
+	margin-bottom: 100px;
+}
+
+.show_top10_div {
+	margin-top: 50px;
+	height: 700px;
+	width: 30%;
+	background-color: gray;
+	border-radius: 20px;
+	border: 10px solid;
+	opacity: 0.9;
+	padding: 0px;
+}
+.show_following_div {
+	margin-top: 50px;
+	height: 800px;
+	width: 30%;
+	background-color: gray;
+	border-radius: 20px;
+	border: 10px solid;
+	opacity:80.9;
+	padding: 0px;
+	margin-bottom: 100px;
+}
+.follow_button {
+	margin-top: 50%;
 }

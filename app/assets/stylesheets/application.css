@@ -12,4 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require blueimp-gallery
+ *= require bootstrap-image-gallery
+ *= require blueimp-gallery-indicator
+ *= require blueimp-gallery-video
  */

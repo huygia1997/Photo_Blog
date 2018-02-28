@@ -1,0 +1,119 @@
+<% provide(:title, @title) %>
+
+<div class="show_info_div">
+	<% if @user.ava? %>
+		<%= link_to image_tag(@user.ava.url, id: 'ava_img'), @user %>
+
+		<% else %>
+		<%= link_to image_tag('heroku.png', id: 'ava_img'), @user %>
+	<% end %>
+
+	<br/>
+
+	<p id="show_name"><%= @user.name %></p>
+	<p id="show_num">Pic num: <%= @user.microposts.count %></p>
+	<p id="show_follower">
+		<% @user ||= current_user %>
+		<a href="<%= followers_user_path(@user) %>">
+	    <strong id="followers">
+	      <%= @user.followers.count %>
+	    </strong>
+	    followers
+	  </a>
+	</p>
+	<p id="show_following">
+		<a href="<%= following_user_path(@user) %>">
+		    <strong id="following" class="stat">
+		      <%= @user.following.count %>
+		    </strong>
+		    following
+		  </a>
+	</p>
+
+</div>
+
+<div class="row">
+	<div class="container">
+	
+	<div class="show_member_div col-md-4">
+
+	    
+	</div>
+
+	<div class="show_following_div container col-md-offset-8 ">
+		<p style="text-align: center; font-size: xx-large; color: green; border-bottom: 2px dashed blue; margin-bottom: 20px;"> Follower list:</p>
+
+		<% if @users.any? %>
+	      	<ol class="users" style="word-spacing: 10px; list-style-type: none;">
+			  <% @users.each do |user| %>
+			    <li class="member_m">
+			    	<% if user.ava? %>
+			    	<div class="member_form">
+			    		<div class="member_pic">
+			    			<%= link_to image_tag(user.ava.url, id: 'ava_img2'), user  %>
+			    			
+			    		</div>
+			    		<div class="member_name">
+			    			<%= link_to user do %>
+				      			<span id="member_name">
+				      				<%= user.name %>
+				      			</span>
+				      		<% end %>
+			    		</div>
+			    		<div class="member_follow">
+			    				<span>
+
+			    					<strong id="followers">
+								      followers: <%= user.followers.count %>
+								    </strong>
+			    				</span>
+				    		</div>
+			    	</div>
+			    		
+			      		
+			      	<% else %>
+			      		<div class="member_form">
+				    		<div class="member_pic">
+				    			<%= link_to image_tag('heroku.png', id: 'ava_img2'), user  %>
+				    		</div>
+				    		<div class="member_name">
+			    				<%= link_to user do %>
+					      			<span id="member_name">
+					      				<%= user.name %>
+					      			</span>
+					      		<% end %>
+				    		</div>
+				    		<div class="member_follow">
+			    				<span>
+
+			    					<strong id="followers">
+								      followers: <%= user.followers.count %>
+								    </strong>
+			    				</span>
+				    		</div>
+				    	</div>
+			      		
+			      		
+			    	<% end %>
+			      
+			    </li>
+
+			  <% end %>
+			  <%= will_paginate %>
+			</ol>
+
+
+
+	      
+	      <<!-- div class="pagi">
+	      	<%= will_paginate %>
+	      </div> -->
+	    <% else %>
+	    	<p style="text-align: center; color: red;"> Woahhhh!!</p>
+	    <% end %>
+
+	</div>
+
+</div>
+</div>
+

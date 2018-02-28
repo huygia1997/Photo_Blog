@@ -7,6 +7,8 @@
 	<h1 class="welcome">store your favorite pictures</h1>
 </div>
 
+
+
 <div id="login_div" class="container jumbotron">
 	<span id="login_content">Wanna join???</span> <br/> <br/>
 	<h2 class="login_content"><%= link_to "Log in", login_path, class:  
@@ -16,8 +18,8 @@
 </div>
 
 <div id="user_div" class="container jumbotron">
-	<%= link_to image_tag("user.jpg", alt: "User icon", id: "img_user"), about_path  %>
-	<p id="user_num">Number</p>
+	<%= link_to image_tag("user.jpg", alt: "User icon", id: "img_user"), users_path  %>
+	<p id="user_num"><%= @users.count %> members</p>
 	
 </div>
 

@@ -15,6 +15,15 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require blueimp-gallery
+//= require blueimp-gallery-fullscreen
+//= require blueimp-gallery-indicator
+//= require blueimp-gallery-video
+//= require blueimp-gallery-youtube
+//= require jquery.blueimp-gallery
+//= require bootstrap-image-gallery
+
+
 document.addEventListener("turbolinks:load", function(event) { 
  // your jquery code
  // menu
@@ -56,14 +65,14 @@ document.addEventListener("turbolinks:load", function(event) {
         });
         // scroll body to 0px on click
         $('#back_to_top').click(function () {
-            $('#back_to_top').tooltip('hide');
+            // $('#back_to_top').tooltip('hide');
             $('body,html').animate({
                 scrollTop: 0
             }, 800);
             return false;
         });
         
-        $('#back_to_top').tooltip('show');
+        // $('#back_to_top').tooltip('show');
 
         // image size
         $('#ava_size').bind('change', function() {

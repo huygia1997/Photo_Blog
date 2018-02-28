@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-	layout 'about_layout', only: [:new]
+	before_action :loggout_user, only: [:new, :create]
   def new
 
   end
@@ -21,7 +21,13 @@ class SessionsController < ApplicationController
   	
   end
 
-
+  private 
+	  def loggout_user
+	      unless !logged_in?
+	        flash[:danger] = "Please log out."
+	        redirect_to current_user
+	      end
+	    end
 
 
 end
